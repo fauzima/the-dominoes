@@ -66,10 +66,10 @@ export default function Home() {
           </button>
         </div>
         <div className="mx-auto flex pt-2">
-          <div className="group rounded-full">
+          <div className="group rounded-full text-white">
             <button
               onClick={() => setDisplay(RemovebyTotal(display, totalNumber))}
-              className="rounded-l-full bg-primary py-1 pl-4 pr-1 text-center text-white transition-colors ease-in-out group-hover:bg-accent"
+              className="rounded-l-full bg-primary py-1 pl-4 pr-[2px] text-center transition-colors ease-in-out group-hover:bg-accent"
             >
               Rmv by total of
             </button>
@@ -81,7 +81,7 @@ export default function Home() {
               min={2}
               max={12}
               onChange={(e) => setTotalNumber(e.target.value)}
-              className="w-12 rounded-r-full border-y-4 border-r-4 border-primary px-1 transition-colors ease-in-out group-hover:border-accent"
+              className="w-12 rounded-r-full border-y-4 border-r-4 border-primary bg-primary px-1 transition-colors ease-in-out group-hover:border-accent group-hover:bg-accent"
             />
           </div>
         </div>
