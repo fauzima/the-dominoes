@@ -23,7 +23,7 @@ export default function Home() {
   return (
     <div className="mx-auto flex size-full max-w-screen-lg flex-grow flex-col px-2 py-10 text-sm font-semibold sm:text-base">
       <Header text="The Dominoes" />
-      <div className="mt-5 flex w-full flex-col pb-5 rounded-2xl border border-neutral-500/50 bg-neutral-400/50 transition-colors duration-700 ease-in-out dark:bg-transparent">
+      <div className="mt-5 flex w-full flex-col rounded-2xl border border-neutral-500/50 bg-neutral-400/50 pb-5 transition-colors duration-700 ease-in-out dark:bg-transparent">
         <div className="flex items-center justify-between rounded-t-2xl bg-white/25 py-1 backdrop-blur">
           <div className="w-1/3"></div>
           <p className="w-1/3 text-center">Cards display</p>
@@ -65,23 +65,25 @@ export default function Home() {
             <Button text="Rmv dupes" />
           </button>
         </div>
-        <div className="flex pt-2 mx-auto">
-          <button
-            onClick={() => setDisplay(RemovebyTotal(display, totalNumber))}
-            className="hover:bg-accent rounded-l-full bg-primary py-1 pl-4 pr-1 text-center text-white transition-colors ease-in-out hover:duration-150"
-          >
-            Rmv by total of
-          </button>
-          <input
-            name="removeTotal"
-            id="removeTotal"
-            type="number"
-            value={totalNumber}
-            min={2}
-            max={12}
-            onChange={(e) => setTotalNumber(e.target.value)}
-            className="w-12 rounded-r-full border-y-4 border-r-4 border-primary px-1"
-          />
+        <div className="mx-auto flex pt-2">
+          <div className="group rounded-full">
+            <button
+              onClick={() => setDisplay(RemovebyTotal(display, totalNumber))}
+              className="rounded-l-full bg-primary py-1 pl-4 pr-1 text-center text-white transition-colors ease-in-out group-hover:bg-accent"
+            >
+              Rmv by total of
+            </button>
+            <input
+              name="removeTotal"
+              id="removeTotal"
+              type="number"
+              value={totalNumber}
+              min={2}
+              max={12}
+              onChange={(e) => setTotalNumber(e.target.value)}
+              className="w-12 rounded-r-full border-y-4 border-r-4 border-primary px-1 transition-colors ease-in-out group-hover:border-accent"
+            />
+          </div>
         </div>
       </div>
     </div>

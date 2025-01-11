@@ -11,9 +11,9 @@ export default function NumDisplay({ display }: { display: number[][] }) {
   }, [display]);
 
   return (
-    <div className="flex flex-col items-center justify-center gap-1 bg-white/25 p-2 sm:flex-row text-center">
+    <div className="flex flex-col items-center justify-center gap-1 bg-white/25 p-2 text-center sm:flex-row">
       <div className="tracking-wide">
-        <span>Array display: {"["}</span>
+        <span>Array display: {display.length == 0 ? "[]" : "["}</span>
         {display.map((item, idx) => {
           return (
             <span key={idx}>

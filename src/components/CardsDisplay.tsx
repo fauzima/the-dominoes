@@ -2,7 +2,7 @@ import Dot from "./Dot";
 
 export default function CardsDisplay({ display }: { display: number[][] }) {
   return (
-    <div className="mx-auto flex w-full max-w-screen-sm flex-wrap place-content-center content-start items-center gap-3 px-3 py-12 sm:p-3">
+    <div className="mx-auto flex w-full max-w-screen-sm flex-wrap place-content-center content-start items-center gap-3 px-3 py-12">
       {display.map((item, idx) => {
         return (
           <div
